@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SoffidIAMPlugin xmlns="http://www.soffid.com/schema/iam-plugin-v1"> 
+	<name>Soffid fault-tolerant database replication</name>
+	<version>${pom.version}</version>
+	<core name="Replica common classes" resource="replica-common-${pom.version}.jar"/>
+	<core name="Replica core classes" resource="replica-core-${pom.version}.jar"/>
+	<web name="Replica web files" resource="replica-web-${pom.version}.war"/>
+</SoffidIAMPlugin>

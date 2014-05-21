@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<database name='Soffid'>
+	<!-- es.caib.seycon.ng.model.SecretEntity -->
+
+	<table name='SCR_REPLSTAT'>
+		<column name='RPS_TABLE' type='VARCHAR' length='150' notNull='true' primaryKey='true'/>
+	</table>
+</database>

@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<artifactId>root</artifactId>
+		<groupId>com.soffid.iam.addon.replica</groupId>
+		<version>1.0.1</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>meta</artifactId>
+	<name>Replica meta package</name>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.soffid.tools</groupId>
+				<artifactId>mda-maven-plugin</artifactId>
+				<version>2.0.17</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>mda2</goal>
+						</goals>
+						<phase>package</phase>
+						<configuration>
+							<translate>false</translate>
+							<pluginName>replica</pluginName>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>com.soffid.tools</groupId>
+			<artifactId>mdagenerator</artifactId>
+			<scope>compile</scope>
+			<version>2.0.18</version>
+		</dependency>
+		<dependency>
+			<groupId>com.soffid.iam.console</groupId>
+			<artifactId>iam-meta</artifactId>
+			<version>${console.version}</version>
+		</dependency>
+	</dependencies>
+</project>
+

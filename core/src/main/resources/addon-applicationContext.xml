@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!-- ========================= Interceptors ========================= -->
+	<bean id="serviceInterceptor-Replica" class="com.soffid.iam.addons.replica.interceptor.ReplicaServiceInterceptor" singleton="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+		<property name="replicaService"><ref bean="replica-replicaService"/></property>
+	</bean>
+
+	<bean id="daoInterceptor-Replica" class="com.soffid.iam.addons.replica.interceptor.ReplicaDaoInterceptor" singleton="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+		<property name="replicaService"><ref bean="replica-replicaService"/></property>
+	</bean>
+
+	<!-- ========================= End of Interceptor DEFINITIONS ========================= -->
+
+</beans>
